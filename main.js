@@ -102,13 +102,18 @@ function clearAll() {
     createDiv.remove();
     parag.innerHTML = content[0];
     btnClear.style.display = 'none';
+    errName.style.display = 'none';
+    errEmail.style.display = 'none';
+    errPhone.style.display = 'none';
 }
 
 // Функция вывода сообщений об ошибке
 function message(id, str) {
-
     if (id == id) {
         id.innerText = `${str}`;
         id.style.display = 'block';
     }
+    setTimeout(() => {
+        id.style.display = 'none'
+    }, 8000);
 }
