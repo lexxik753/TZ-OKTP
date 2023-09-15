@@ -60,7 +60,6 @@ function toggleSubmit() {
 
     if (onInputEmail() && onInputPhone()) {
         createFields();
-        clearInput();
     }
 }
 
@@ -105,6 +104,7 @@ function clearAll() {
     errName.style.display = 'none';
     errEmail.style.display = 'none';
     errPhone.style.display = 'none';
+    clearInput();
 }
 
 // Функция вывода сообщений об ошибке
