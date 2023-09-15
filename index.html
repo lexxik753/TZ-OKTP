@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <title>ТЗ</title>
+</head>
+
+<body class="bg-zinc-400 w-full">
+    <div class="wrapper">
+        <header class="w-screen-xl bg-black text-white flex mb-24">
+            <h1 class="px-8 py-4 text-xl">ТЗ</h1>
+            <div class="container mx-auto flex justify-end space-x-7">
+                <button
+                    class="self-center border-b-2 white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-700">Страница
+                    1</button>
+                <button class="self-center hover:scale-110 active:-translate-y-2 duration-700">Страница 2</button>
+                <button class="self-center hover:skew-y-12 active:-translate-x-3">Страница 3</button>
+                <button class="self-center hover:rotate-180 active:translate-x-3">Страница 4</button>
+                <button class="self-center hover:scale-110 active:translate-y-6">Страница 5</button>
+            </div>
+        </header>
+        <main class="">
+            <div class="container mx-auto px-4 grid grid-cols-2">
+                <section class="grid grid-flow-row auto-rows-fr auto-cols-fr">
+                    <h2 class="text-4xl text-white">Тестовое задание</h2>
+                    <p id="parag" class="pt-0 mt-0 animate__animated animate__slideInDown animate__slower text-white">
+                        Lorem ipsum dolor, sit
+                        amet consectetur adipisicing elit. Ex cupiditate eveniet eius ratione, nulla delectus tenetur
+                        velit facere minus magni libero provident repellendus. Quod quisquam ipsum quaerat vero?
+                        Molestiae, nobis?
+                    </p>
+                    <button id="clear"
+                        style="display: none; width: 100px; height: 40px; color: white; border: 1px solid white; position: relative; margin-top: 50px;">Сброс</button>
+                </section>
+                <aside class="grid grid-flow-row auto-rows-2 auto-cols-auto w-80 h-[334px] mx-auto bg-gray-200">
+                    <div class="container flex flex-col">
+                        <h3 class="text-lg text-center font-bold h-14 bg-zinc-100 py-4">Введите <span
+                                class="text-orange-600"> Ваши
+                            </span> данные</h3>
+                        <input id="personName" name="name" class="p-9 border-b-2 border-gray w-full h-14" type="text"
+                            placeholder="Имя" required>
+                        <p id="errName" style="display: none;" class="text-red-500 text-xs italic w-full"></p>
+                        <input id="personEmail" name="email" class=" p-9 border-b-2 border-gray w-full h-14"
+                            type="email" placeholder="E-mail" required>
+                        <p id="errEmail" style="display: none;" class="text-red-500 text-xs italic w-full"></p>
+                        <input id="personPhone" name="phone" class="p-9 border-b-2 border-gray w-full h-14" type="text"
+                            placeholder="Телефон +7(999)999-99-99" required>
+                        <p id="errPhone" style="display: none;" class="text-red-500 text-xs italic w-full"></p>
+                        <button id="btnSubmit" type="submit"
+                            class="h-14 w-full text-center text-white bg-orange-400">Отправить</button>
+                    </div>
+                </aside>
+            </div>
+        </main>
+        <footer class="fixed bottom-0 mt-1 bg-white w-full p-3">
+            <nav>
+                <div class="container flex justify-end space-x-7 ml-auto mr-9 pb-5 pt-4">
+                    <a href="https://vk.com/" target="_blank"><img src="img/icons8-vk-circled.svg"
+                            alt="ссылка на Вконтакте"></a>
+                    <a href="https://ru.pinterest.com/" target="_blank"><img src="img/icons8-pinterest.svg"
+                            alt="ссылка на Pinterest"></a>
+                    <a href="https://discord.com/" target="_blank"><img src="img/icons8-discord.svg"
+                            alt="ссылка на Discord"></a>
+                </div>
+            </nav>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>
