@@ -5,6 +5,9 @@ const parag = document.querySelector('#parag');
 const btnSubmit = document.querySelector('#btnSubmit');
 const btnClear = document.querySelector('#clear');
 const createDiv = document.createElement('div');
+const errName = document.querySelector('#errName');
+const errEmail = document.querySelector('#errEmail');
+const errPhone = document.querySelector('#errPhone');
 const content = [];
 
 content.push(parag.textContent);
@@ -29,7 +32,7 @@ function isEmailValid(value) {
 
 function onInputEmail() {
     let valEmail = personEmail.value
-    return isEmailValid(valEmail) ? true : message("Неверно указан формат почты")
+    return isEmailValid(valEmail) ? true : message(errEmail, "Неверно указан формат почты")
 }
 
 // Валидация номера телефона
@@ -39,7 +42,7 @@ function isPhoneValid(value) {
 
 function onInputPhone() {
     let valPhone = personPhone.value;
-    return isPhoneValid(valPhone) ? true : message("Неверно указан формат телефона");
+    return isPhoneValid(valPhone) ? true : message(errPhone, "Неверно указан формат телефона");
 }
 
 function clearInput() {
@@ -51,9 +54,9 @@ function clearInput() {
 // Выполняем валидацию перед отрисовкой
 function toggleSubmit() {
     // if (personName.value == '') return alert('Поле имя незаполнено');
-    if (personName.value == '') return message('Поле имя незаполнено');
-    if (personEmail.value == '') return message('Поле почты незаполнено');
-    if (personPhone.value == '') return message('Поле телефона незаполнено');
+    if (personName.value == '') return message(errName, 'Поле имя незаполнено');
+    if (personEmail.value == '') return message(errEmail, 'Поле почты незаполнено');
+    if (personPhone.value == '') return message(errPhone, 'Поле телефона незаполнено');
 
     if (onInputEmail() && onInputPhone()) {
         createFields();
@@ -102,17 +105,16 @@ function clearAll() {
 }
 
 // Функция вывода сообщений об ошибке
-function message(str) {
-    let errName = document.querySelector('#errName');
-    let errEmail = document.querySelector('#errEmail');
-    let errPhone = document.querySelector('#errPhone');
+function message(id, str) {
 
-    errName.innerText = `${str}`;
-    errEmail.innerText = `${str}`;
-    errPhone.innerText = `${str}`;
-
-    errName.style.display = 'block';
-    errEmail.style.display = 'block';
-    errPhone.style.display = 'block';
-
+    if (id == id) {
+        id.innerText = `${str}`;
+        id.style.display = 'block';
+    } else if (id == id) {
+        errEmail.innerText = `${str}`;
+        errPhone.innerText = `${str}`;
+    } else if (id == id) {
+        errEmail.style.display = 'block';
+        errPhone.style.display = 'block';
+    }
 }
