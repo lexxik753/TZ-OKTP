@@ -110,11 +110,5 @@ function message(id, str) {
     if (id == id) {
         id.innerText = `${str}`;
         id.style.display = 'block';
-    } else if (id == id) {
-        errEmail.innerText = `${str}`;
-        errPhone.innerText = `${str}`;
-    } else if (id == id) {
-        errEmail.style.display = 'block';
-        errPhone.style.display = 'block';
     }
 }
